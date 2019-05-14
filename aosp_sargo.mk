@@ -65,3 +65,5 @@ PRODUCT_BRAND := Android
 PRODUCT_NAME := aosp_sargo
 PRODUCT_DEVICE := sargo
 PRODUCT_MODEL := AOSP on sargo
+
+$(call inherit-product, vendor/google/sargo/sargo-vendor.mk)

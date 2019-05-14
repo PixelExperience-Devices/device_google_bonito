@@ -65,3 +65,5 @@ PRODUCT_BRAND := Android
 PRODUCT_NAME := aosp_bonito
 PRODUCT_DEVICE := bonito
 PRODUCT_MODEL := AOSP on bonito
+
+$(call inherit-product, vendor/google/bonito/bonito-vendor.mk)

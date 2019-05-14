@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 include build/make/target/board/BoardConfigMainlineCommon.mk
 include build/make/target/board/BoardConfigPixelCommon.mk
 
@@ -96,7 +98,8 @@ AB_OTA_PARTITIONS += \
     vbmeta \
     dtbo \
     product \
-    system_ext
+    system_ext \
+    vendor
 
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -125,6 +128,11 @@ BOARD_GOOGLE_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     vendor \
     product \
     system_ext
+
+ifneq ($(PRODUCT_USE_DYNAMIC_PARTITIONS), true)
+    BOARD_VENDORIMAGE_PARTITION_SIZE := 805306368
+endif
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 BOARD_SUPER_PARTITION_SIZE := 4072669184
 BOARD_SUPER_PARTITION_METADATA_DEVICE := system
