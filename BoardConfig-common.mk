@@ -39,6 +39,18 @@ TARGET_BOARD_COMMON_PATH := device/google/bonito/sdm710
 
 BUILD_BROKEN_DUP_RULES := true
 
+# Kernel
+BOARD_KERNEL_IMAGE_NAME := Image.lz4
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    DTC=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
+    MKDTIMG=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/mkdtimg
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CONFIG := bonito_defconfig
+TARGET_KERNEL_SOURCE := kernel/google/msm-4.9
+TARGET_NEEDS_DTBOIMAGE := true
+
 BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8 androidboot.console=ttyMSM0 printk.devkmsg=on
 BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x237
 BOARD_KERNEL_CMDLINE += ehci-hcd.park=3
@@ -67,7 +79,6 @@ BOARD_BOOT_HEADER_VERSION := 2
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 # DTBO partition definitions
-BOARD_PREBUILT_DTBOIMAGE := device/google/bonito-kernel/dtbo.img
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608
 
 TARGET_NO_KERNEL := false
@@ -233,48 +244,6 @@ ODM_MANIFEST_G020H_FILES := device/google/bonito/nfc/manifest_se_eSE1.xml
 
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
-
-# Kernel modules
-ifeq (,$(filter-out sargo_kasan bonito_kasan, $(TARGET_PRODUCT)))
-BOARD_VENDOR_KERNEL_MODULES += \
-    $(wildcard device/google/bonito-kernel/kasan/*.ko)
-else ifeq (,$(filter-out sargo_kernel_debug_memory bonito_kernel_debug_memory, $(TARGET_PRODUCT)))
-BOARD_VENDOR_KERNEL_MODULES += \
-    $(wildcard device/google/bonito-kernel/debug_memory/*.ko)
-else ifeq (,$(filter-out sargo_kernel_debug_memory_accounting bonito_kernel_debug_memory_accounting, $(TARGET_PRODUCT)))
-BOARD_VENDOR_KERNEL_MODULES += \
-    $(wildcard device/google/bonito-kernel/debug_memory_acounting/*.ko)
-BOARD_KERNEL_CMDLINE += page_owner=on
-else ifeq (,$(filter-out sargo_kernel_debug_locking bonito_kernel_debug_locking, $(TARGET_PRODUCT)))
-BOARD_VENDOR_KERNEL_MODULES += \
-    $(wildcard device/google/bonito-kernel/debug_locking/*.ko)
-else ifeq (,$(filter-out sargo_kernel_debug_hang bonito_kernel_debug_hang, $(TARGET_PRODUCT)))
-BOARD_VENDOR_KERNEL_MODULES += \
-    $(wildcard device/google/bonito-kernel/debug_hang/*.ko)
-else ifeq (,$(filter-out sargo_kernel_debug_api bonito_kernel_debug_api, $(TARGET_PRODUCT)))
-BOARD_VENDOR_KERNEL_MODULES += \
-    $(wildcard device/google/bonito-kernel/debug_api/*.ko)
-else
-BOARD_VENDOR_KERNEL_MODULES += \
-    $(wildcard device/google/bonito-kernel/*.ko)
-endif
-
-# DTB
-ifeq (,$(filter-out sargo_kasan bonito_kasan, $(TARGET_PRODUCT)))
-BOARD_PREBUILT_DTBIMAGE_DIR := device/google/bonito-kernel/kasan
-else ifeq (,$(filter-out sargo_kernel_debug_memory bonito_kernel_debug_memory, $(TARGET_PRODUCT)))
-BOARD_PREBUILT_DTBIMAGE_DIR := device/google/bonito-kernel/debug_memory
-else ifeq (,$(filter-out sargo_kernel_debug_memory_accounting bonito_kernel_debug_memory_accounting, $(TARGET_PRODUCT)))
-BOARD_PREBUILT_DTBIMAGE_DIR := device/google/bonito-kernel/debug_memory_accounting
-else ifeq (,$(filter-out sargo_kernel_debug_locking bonito_kernel_debug_locking, $(TARGET_PRODUCT)))
-BOARD_PREBUILT_DTBIMAGE_DIR := device/google/bonito-kernel/debug_locking
-else ifeq (,$(filter-out sargo_kernel_debug_hang bonito_kernel_debug_hang, $(TARGET_PRODUCT)))
-BOARD_PREBUILT_DTBIMAGE_DIR := device/google/bonito-kernel/debug_hang
-else ifeq (,$(filter-out sargo_kernel_debug_api bonito_kernel_debug_api, $(TARGET_PRODUCT)))
-BOARD_PREBUILT_DTBIMAGE_DIR := device/google/bonito-kernel/debug_api
-else
-BOARD_PREBUILT_DTBIMAGE_DIR := device/google/bonito-kernel
-endif
 
 # Testing related defines
 BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/b4s4-setup.sh
