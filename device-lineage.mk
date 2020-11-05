@@ -102,6 +102,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.multisim.config=dsds \
     persist.vendor.mdm.multisim.cfg=dsds
 
+# Elmyra
+PRODUCT_PACKAGES += \
+    ElmyraService
+
 # EUICC
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
