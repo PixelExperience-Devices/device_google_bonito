@@ -106,6 +106,10 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
+# Parts
+PRODUCT_PACKAGES += \
+    GoogleParts
+
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true  \
