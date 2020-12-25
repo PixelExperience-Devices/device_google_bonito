@@ -95,6 +95,13 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.3.vendor \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor
 
+# DSDS
+# Allows using eSIM even without EuiccGoogle (which requires GMS)
+# albeit the management UI is unavailable
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.multisim.config=dsds \
+    persist.vendor.mdm.multisim.cfg=dsds
+
 # EUICC
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
