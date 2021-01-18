@@ -509,6 +509,18 @@
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 0,
       "Value": "43"
+    },
+    {
+      "PowerHint": "Flipendo",
+      "Node": "CPULittleClusterMaxFreq",
+      "Duration": 0,
+      "Value": "1209600"
+    },
+    {
+      "PowerHint": "Flipendo",
+      "Node": "CPUBigClusterMaxFreq",
+      "Duration": 0,
+      "Value": "1363200"
     }
   ]
 }
