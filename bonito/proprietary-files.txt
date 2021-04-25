@@ -199,9 +199,6 @@ product/etc/res/images/charger/battery_fail.png
 product/etc/res/images/charger/battery_scale.png
 product/etc/res/images/charger/main_font.png
 product/etc/res/values/charger/animation.txt
-product/etc/sysconfig/google_build.xml
-product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
-product/etc/sysconfig/nexus.xml
 product/etc/sysconfig/pixel_2019_midyear_exclusive.xml
 product/etc/sysconfig/pixel_experience_2017.xml
 product/etc/sysconfig/pixel_experience_2018.xml
@@ -219,8 +216,6 @@ product/lib64/libsecureuisvc_jni.so
 -product/priv-app/CarrierWifi/CarrierWifi.apk;PRESIGNED
 -product/priv-app/ConnMO/ConnMO.apk
 -product/priv-app/DCMO/DCMO.apk
--product/priv-app/DeviceIntelligenceNetworkPrebuilt/DeviceIntelligenceNetworkPrebuilt.apk;PRESIGNED
--product/priv-app/DevicePersonalizationPrebuiltPixel3/DevicePersonalizationPrebuiltPixel3.apk;PRESIGNED
 -product/priv-app/DiagMon/DiagMon.apk
 -product/priv-app/DMService/DMService.apk
 -product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
