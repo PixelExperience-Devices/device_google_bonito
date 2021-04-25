@@ -81,7 +81,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.mediadrmservice.enable=true \
     ro.hardware.egl=adreno \
     ro.hardware.vulkan=adreno
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
