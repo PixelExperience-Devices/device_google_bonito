@@ -58,7 +58,23 @@ ifneq (REL,$(PLATFORM_VERSION_CODENAME))
 endif
 
 PRODUCT_MANUFACTURER := Google
-PRODUCT_BRAND := Android
+PRODUCT_BRAND := google
 PRODUCT_NAME := aosp_bonito
 PRODUCT_DEVICE := bonito
-PRODUCT_MODEL := AOSP on bonito
+PRODUCT_MODEL := Pixel 3a XL
+
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Inherit some common PixelExperience stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+include device/google/bonito/device-custom.mk
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=bonito \
+    PRIVATE_BUILD_DESC="bonito-user 11 RQ2A.210405.005 7181113 release-keys"
+
+BUILD_FINGERPRINT := google/bonito/bonito:11/RQ2A.210405.005/7181113:user/release-keys
+
+$(call inherit-product, vendor/google/bonito/bonito-vendor.mk)

@@ -236,4 +236,4 @@ BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/b4s4-setup.sh
 
 -include vendor/google_devices/bonito/proprietary/BoardConfigVendor.mk
 
--include device/google/bonito/BoardConfigLineage.mk
+include device/google/bonito/BoardConfigCustom.mk

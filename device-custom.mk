@@ -60,10 +60,6 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.2.vendor \
     vendor.display.config@1.3.vendor
 
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
-
 # Elmyra
 PRODUCT_PACKAGES += \
     ElmyraService
@@ -80,7 +76,7 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-custom
 
 # Parts
 PRODUCT_PACKAGES += \
