@@ -15,3 +15,4 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += device/google/bonito/sepolicy/system_ext/pri
 BOARD_VENDOR_SEPOLICY_DIRS += hardware/google/pixel-sepolicy/ramdump/common
 BOARD_VENDOR_SEPOLICY_DIRS += hardware/google/pixel-sepolicy/powerstats
 BOARD_VENDOR_SEPOLICY_DIRS += hardware/google/pixel-sepolicy/wifi_perf_diag
+BOARD_SEPOLICY_DIRS += hardware/google/pixel-sepolicy/googlebattery
