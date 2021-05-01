@@ -81,3 +81,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.mediadrmservice.enable=true \
     ro.hardware.egl=adreno \
     ro.hardware.vulkan=adreno
+
+# fastbootd
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.fastbootd.available=true
