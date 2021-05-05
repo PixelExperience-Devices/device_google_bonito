@@ -16,15 +16,6 @@
 
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image.lz4
-TARGET_COMPILE_WITH_MSM_KERNEL := true
-TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    DTC=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
-    MKDTIMG=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/mkdtimg
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CONFIG := b4s4_defconfig
-TARGET_KERNEL_SOURCE := kernel/google/msm-4.9
-TARGET_NEEDS_DTBOIMAGE := true
 
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
@@ -43,3 +34,10 @@ BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 30720000
 # Verified Boot
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
+
+# Prebuilt kernel
+TARGET_PREBUILT_KERNEL := device/google/bonito/kernel/Image.lz4
+TARGET_KERNEL_CONFIG := b4s4_defconfig
+TARGET_KERNEL_SOURCE := kernel/google/msm-4.9
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_KERNEL_ARCH := arm64
