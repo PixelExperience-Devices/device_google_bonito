@@ -65,6 +65,7 @@ lib64/libsecureui_svcsock_system.so
 -product/app/MobileFeliCaWebPlugin/MobileFeliCaWebPlugin.apk;PRESIGNED
 -product/app/MobileFeliCaWebPluginBoot/MobileFeliCaWebPluginBoot.apk;PRESIGNED
 -product/app/SSRestartDetector/SSRestartDetector.apk;PRESIGNED
+product/etc/CarrierSettings/a1_at.pb
 product/etc/CarrierSettings/airtel_in.pb
 product/etc/CarrierSettings/apt_tw.pb
 product/etc/CarrierSettings/att5g_us.pb
@@ -96,11 +97,13 @@ product/etc/CarrierSettings/firstnetpacific2_us.pb
 product/etc/CarrierSettings/firstnet_us.pb
 product/etc/CarrierSettings/fi_us.pb
 product/etc/CarrierSettings/fizz_ca.pb
+product/etc/CarrierSettings/free_fr.pb
 product/etc/CarrierSettings/freedommobile_ca.pb
 product/etc/CarrierSettings/gamma_gb.pb
 product/etc/CarrierSettings/h3_at.pb
 product/etc/CarrierSettings/h3_gb.pb  
 product/etc/CarrierSettings/h3_se.pb
+product/etc/CarrierSettings/halebop_se.pb
 product/etc/CarrierSettings/homobile_it.pb
 product/etc/CarrierSettings/idea_in.pb
 product/etc/CarrierSettings/idmobile_gb.pb
@@ -108,6 +111,7 @@ product/etc/CarrierSettings/kddi_jp.pb
 product/etc/CarrierSettings/kddimvno_jp.pb
 product/etc/CarrierSettings/kena_it.pb
 product/etc/CarrierSettings/koodo_ca.pb
+product/etc/CarrierSettings/kpn_nl.pb
 product/etc/CarrierSettings/luckymobile_ca.pb
 product/etc/CarrierSettings/movistar_es.pb
 product/etc/CarrierSettings/o2_de.pb
@@ -135,6 +139,7 @@ product/etc/CarrierSettings/sprint_us.pb
 product/etc/CarrierSettings/sprintprepaid_us.pb
 product/etc/CarrierSettings/sprintwholesale_us.pb
 product/etc/CarrierSettings/starhub_sg.pb
+product/etc/CarrierSettings/stc_sa.pb
 product/etc/CarrierSettings/sunrise_ch.pb
 product/etc/CarrierSettings/swisscom_ch.pb
 product/etc/CarrierSettings/swisscom_li.pb
@@ -145,12 +150,14 @@ product/etc/CarrierSettings/telekom_de.pb
 product/etc/CarrierSettings/telenor_dk.pb
 product/etc/CarrierSettings/telenor_no.pb
 product/etc/CarrierSettings/telenor_se.pb
+product/etc/CarrierSettings/telia_dk.pb
 product/etc/CarrierSettings/telia_no.pb
 product/etc/CarrierSettings/telia_se.pb
 product/etc/CarrierSettings/telstra_au.pb
 product/etc/CarrierSettings/telus_ca.pb
 product/etc/CarrierSettings/three_dk.pb
 product/etc/CarrierSettings/tim_it.pb
+product/etc/CarrierSettings/tmobile_at.pb
 product/etc/CarrierSettings/tmobile_cz.pb
 product/etc/CarrierSettings/tmobile_nl.pb
 product/etc/CarrierSettings/tmobile_us.pb
@@ -186,7 +193,6 @@ product/etc/firmware/music_detector.sound_model
 product/etc/permissions/com.android.omadm.service.xml
 product/etc/permissions/com.android.sdm.plugins.connmo.xml
 product/etc/permissions/com.android.sdm.plugins.diagmon.xml
-product/etc/permissions/com.customermobile.preload.vzw.xml
 product/etc/permissions/com.google.android.hardwareinfo.xml
 product/etc/permissions/com.google.omadm.trigger.xml
 product/etc/permissions/com.verizon.apn.xml
@@ -221,7 +227,6 @@ product/priv-app/EuiccSupportPixel/esim-v1.img
 
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/etc/permissions/com.android.omadm.radioconfig.xml
-system_ext/etc/permissions/com.verizon.llkagent.xml
 -system_ext/framework/com.android.hotwordenrollment.common.util.jar
 -system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar
 -system_ext/framework/com.qualcomm.qti.uceservice-V2.1-java.jar
@@ -341,4 +346,3 @@ system_ext/lib64/vendor.qti.hardware.soter@1.0.so
 system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so
 system_ext/lib64/vendor.qti.ims.callinfo@1.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@1.0.so
--system_ext/priv-app/LLKAgent/LLKAgent.apk
