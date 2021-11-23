@@ -368,6 +368,11 @@ PRODUCT_PACKAGES += \
     hardware.google.bluetooth.sar@1.0.vendor:64 \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor
 
+# Camera
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.vendor.camera.extensions.package=com.google.android.apps.camera.services \
+    ro.vendor.camera.extensions.service=com.google.android.apps.camera.services.extensions.service.PixelExtensions
+
 # CHRE
 PRODUCT_PACKAGES += \
     chre
