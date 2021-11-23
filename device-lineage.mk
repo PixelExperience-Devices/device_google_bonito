@@ -95,16 +95,17 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.3.vendor \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor
 
+# Camera
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.vendor.camera.extensions.package=com.google.android.apps.camera.services \
+    ro.vendor.camera.extensions.service=com.google.android.apps.camera.services.extensions.service.PixelExtensions
+
 # DSDS
 # Allows using eSIM even without EuiccGoogle (which requires GMS)
 # albeit the management UI is unavailable
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.multisim.config=dsds \
     persist.vendor.mdm.multisim.cfg=dsds
-
-# Elmyra
-PRODUCT_PACKAGES += \
-    ElmyraService
 
 # EUICC
 PRODUCT_COPY_FILES += \
