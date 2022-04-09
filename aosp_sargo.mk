@@ -76,9 +76,9 @@ include device/google/bonito/device-custom.mk
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=sargo \
-    PRIVATE_BUILD_DESC="sargo-user 12 SP2A.220305.012 8177914 release-keys"
+    PRIVATE_BUILD_DESC="sargo-user 12 SP2A.220405.003 8210211 release-keys"
 
-BUILD_FINGERPRINT := google/sargo/sargo:12/SP2A.220305.012/8177914:user/release-keys
+BUILD_FINGERPRINT := google/sargo/sargo:12/SP2A.220405.003/8210211:user/release-keys
 
 $(call inherit-product, vendor/google/sargo/sargo-vendor.mk)
 
