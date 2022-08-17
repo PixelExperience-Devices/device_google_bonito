@@ -52,7 +52,6 @@ PRODUCT_PACKAGES += \
     hardware.google.bluetooth.sar@1.0.vendor \
     hardware.google.light@1.0.vendor \
     libcodec2_hidl_plugin:32 \
-    libavservices_minijail_vendor:32 \
     libcodec2_hidl@1.0.vendor:32 \
     libcodec2_vndk.vendor \
     libcppbor.vendor:64 \
