@@ -132,6 +132,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.egl=adreno \
     ro.hardware.vulkan=adreno
 
+# Shims
+PRODUCT_PACKAGES += \
+    lib-secureuishim
+
 # RCS
 PRODUCT_PACKAGES += \
     PresencePolling \
