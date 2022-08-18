@@ -7,6 +7,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += device/google/bonito/sepolicy/vendor/qcom/sdm710
 BOARD_VENDOR_SEPOLICY_DIRS += device/google/bonito/sepolicy/vendor/google
 BOARD_VENDOR_SEPOLICY_DIRS += device/google/bonito/sepolicy/vendor/verizon
 BOARD_VENDOR_SEPOLICY_DIRS += device/google/bonito/sepolicy/tracking_denials
+BOARD_VENDOR_SEPOLICY_DIRS += hardware/google/pixel-sepolicy/wifi_perf_diag
 
 # system_ext
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += device/google/bonito/sepolicy/system_ext/private
