@@ -473,7 +473,8 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster-V3-ndk_platform.vendor:64 \
     android.hardware.power-V1-ndk_platform.vendor:64 \
     android.hardware.power.stats-V1-ndk_platform:64 \
-    android.hardware.rebootescrow-V1-ndk_platform.vendor:64
+    android.hardware.rebootescrow-V1-ndk_platform.vendor:64 \
+    lib-secureuishim
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \

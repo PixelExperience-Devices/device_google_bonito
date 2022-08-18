@@ -59,6 +59,9 @@ function blob_fixup() {
     product/etc/sysconfig/nexus.xml)
         sed -i 's/qulacomm/qualcomm/' "${2}"
         ;;
+    product/lib64/libsecureuisvc_jni.so)
+        "${PATCHELF}" --add-needed "lib-secureuishim.so" "${2}"
+        ;;
     esac
 }
 
