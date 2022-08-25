@@ -186,39 +186,4 @@
             <instance>default</instance>
         </interface>
     </hal>
-<hal format="hidl" optional="true">
-        <name>hardware.google.light</name>
-        <version>1.0</version>
-        <interface>
-            <name>ILight</name>
-            <instance>default</instance>
-        </interface>
-      </hal>
-<hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.display.allocator</name>
-        <version>3.0</version>
-        <version>4.0</version>
-        <interface>
-            <name>IQtiAllocator</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.display.mapper</name>
-        <version>3.0</version>
-        <version>4.0</version>
-        <interface>
-            <name>IQtiMapper</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.display.mapperextensions</name>
-        <version>1.0</version>
-        <interface>
-            <name>IQtiMapperExtensions</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-
 </compatibility-matrix>
