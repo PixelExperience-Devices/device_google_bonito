@@ -359,7 +359,4 @@
          from DOZE to ON. -->
     <integer name="config_wakeUpDelayDoze">50</integer>
 
-    <!-- Disable AOD by default -->
-    <bool name="config_dozeAlwaysOnEnabled">false</bool>
-
 </resources>
