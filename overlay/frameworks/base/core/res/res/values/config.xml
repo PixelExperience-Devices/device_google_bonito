@@ -213,7 +213,7 @@
     <string name="config_dozeDoubleTapSensorType" translatable="false">com.google.sensor.double_touch</string>
 
     <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
-    <bool name="config_displayBlanksAfterDoze">true</bool>
+    <bool name="config_displayBlanksAfterDoze">false</bool>
 
     <!-- Specifies whether to decouple the auto-suspend state of the device from the display on/off state. -->
     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
@@ -354,4 +354,12 @@
     <string-array name="config_biometric_sensors" translatable="false" >
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
+
+    <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
+
+    <!-- Delay that allows some content to arrive at the display before switching
+         from DOZE to ON. -->
+    <integer name="config_wakeUpDelayDoze">32</integer>
+
 </resources>
