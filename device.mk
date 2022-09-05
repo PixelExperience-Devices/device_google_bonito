@@ -411,6 +411,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libjson
 
+# NDK Platform backend
+PRODUCT_PACKAGES += \
+    android.frameworks.stats-V1-ndk_platform.vendor:64 \
+    android.hardware.identity-V3-ndk_platform.vendor:64 \
+    android.hardware.keymaster-V3-ndk_platform.vendor:64 \
+    android.hardware.power-V1-ndk_platform.vendor:64 \
+    android.hardware.rebootescrow-V1-ndk_platform.vendor:64
+
 # Nos
 PRODUCT_PACKAGES += \
     libnos:64 \
