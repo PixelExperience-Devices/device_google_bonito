@@ -111,6 +111,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     NowPlayingOverlay
 
+# NDK Platform backend
+PRODUCT_PACKAGES += \
+    android.frameworks.stats-V1-ndk_platform.vendor:64 \
+    android.hardware.identity-V3-ndk_platform.vendor:64 \
+    android.hardware.keymaster-V3-ndk_platform.vendor:64 \
+    android.hardware.power-V1-ndk_platform.vendor:64 \
+    android.hardware.rebootescrow-V1-ndk_platform.vendor:64
+
 # EUICC
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
