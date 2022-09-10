@@ -456,11 +456,10 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.2.vendor:64 \
     android.hardware.neuralnetworks@1.3.vendor:64 \
     android.hardware.oemlock@1.0.vendor:64 \
-    android.hardware.radio.config@1.0.vendor:64 \
-    android.hardware.radio.config@1.1.vendor:64 \
+    android.hardware.radio.config@1.2.vendor:64 \
     android.hardware.radio.deprecated@1.0.vendor:64 \
-    android.hardware.radio@1.2.vendor:64 \
-    android.hardware.radio@1.3.vendor:64 \
+    android.hardware.radio@1.5.vendor:64 \
+    android.hardware.secure_element@1.2.vendor:64 \
     android.hardware.sensors@1.0.vendor:32 \
     android.hardware.sensors@2.0.vendor \
     android.hardware.weaver@1.0.vendor:64 \
@@ -469,7 +468,8 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi@1.3.vendor:64 \
     android.hardware.wifi@1.4.vendor:64 \
     android.hardware.wifi@1.5.vendor:64 \
-    android.system.net.netd@1.1.vendor:64
+    android.system.net.netd@1.1.vendor:64 \
+    libavservices_minijail.vendor:64
 
 # Properties
 TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
@@ -483,6 +483,24 @@ PRODUCT_PACKAGES += \
     android.hardware.power.stats-V1-ndk_platform:64 \
     android.hardware.rebootescrow-V1-ndk_platform.vendor:64 \
     lib-secureuishim
+
+# Telephony
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
+# VNDK FWK detect
+PRODUCT_PACKAGES += \
+    libqti_vndfwk_detect.vendor \
+    libvndfwk_detect_jni.qti.vendor
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
