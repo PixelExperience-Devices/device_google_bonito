@@ -12,6 +12,7 @@ hwbinder_use(hal_rcsservice)
 # add IUceSerive and IService to Hidl interface
 add_hwservice(hal_rcsservice, hal_imsrcsd_hwservice)
 add_hwservice(hal_rcsservice, hal_imscallinfo_hwservice)
+add_hwservice(hal_rcsservice, hal_imsfactory_hwservice)
 
 get_prop(hal_rcsservice, ims_prop)
 
@@ -44,5 +45,6 @@ wakelock_use(hal_rcsservice)
 allow hal_rcsservice self:capability net_bind_service;
 
 set_prop(hal_rcsservice, ctl_vendor_imsrcsservice_prop)
+set_prop(hal_rcsservice, ims_prop)
 
 dontaudit hal_rcsservice kernel:system module_request;
