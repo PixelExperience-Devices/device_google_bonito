@@ -474,6 +474,10 @@ PRODUCT_PACKAGES += \
 # Properties
 TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
 
+# Radio
+PRODUCT_COPY_FILES += \
+    device/google/bonito/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml
+
 # Shims
 PRODUCT_PACKAGES += \
     android.frameworks.stats-V1-ndk_platform.vendor:64 \
