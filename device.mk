@@ -471,6 +471,10 @@ PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor:64 \
     libavservices_minijail.vendor:64
 
+# Now Playing
+PRODUCT_PACKAGES += \
+    NowPlayingOverlay
+
 # Properties
 TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
 
