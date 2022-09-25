@@ -471,6 +471,10 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi@1.5.vendor:64 \
     android.system.net.netd@1.1.vendor:64
 
+# Now Playing
+PRODUCT_PACKAGES += \
+    NowPlayingOverlay
+
 # Properties
 TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
 
