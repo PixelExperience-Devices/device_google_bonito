@@ -42,6 +42,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 
+# Inherit some common PixelExperience stuff
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
 $(call inherit-product, device/google/bonito/device-sargo.mk)
 $(call inherit-product-if-exists, vendor/google_devices/bonito/proprietary/device-vendor.mk)
 
@@ -61,9 +66,15 @@ ifneq (REL,$(PLATFORM_VERSION_CODENAME))
 endif
 
 PRODUCT_MANUFACTURER := Google
-PRODUCT_BRAND := Android
+PRODUCT_BRAND := google
 PRODUCT_NAME := aosp_sargo
 PRODUCT_DEVICE := sargo
-PRODUCT_MODEL := AOSP on sargo
+PRODUCT_MODEL := Pixel 3a
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_PRODUCT=sargo \
+    PRIVATE_BUILD_DESC="sargo-user 12 SP2A.220505.008 8782922 release-keys"
+
+BUILD_FINGERPRINT := google/sargo/sargo:12/SP2A.220505.008/8782922:user/release-keys
 
 $(call inherit-product, vendor/google/sargo/sargo-vendor.mk)
