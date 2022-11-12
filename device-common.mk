@@ -113,7 +113,7 @@ PRODUCT_PACKAGES += \
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_product=true \
     POSTINSTALL_PATH_product=bin/check_dynamic_partitions \
-    FILESYSTEM_TYPE_product=ext4 \
+    FILESYSTEM_TYPE_product=erofs \
     POSTINSTALL_OPTIONAL_product=false \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.use_color_management=true
