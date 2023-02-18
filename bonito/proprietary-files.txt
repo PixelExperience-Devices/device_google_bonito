@@ -86,8 +86,6 @@ product/priv-app/HotwordEnrollmentOKGoogleRT5514/HotwordEnrollmentOKGoogleRT5514
 product/priv-app/HotwordEnrollmentXGoogleRT5514/HotwordEnrollmentXGoogleRT5514.apk;PRESIGNED
 
 # Permissions
-product/etc/permissions/privapp-permissions-google-p.xml
-product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
 product/etc/sysconfig/nexus.xml
 product/etc/sysconfig/pixel_2019_midyear_exclusive.xml
 product/etc/sysconfig/pixel_experience_2017.xml
@@ -290,9 +288,6 @@ system_ext/framework/com.google.android.camera.extensions.jar
 # Hotword
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
-
-# Permissions
-system_ext/etc/permissions/privapp-permissions-google-se.xml
 
 # Radio
 system_ext/etc/permissions/com.android.omadm.radioconfig.xml
