@@ -475,6 +475,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NowPlayingOverlay
 
+# Permissions
+# NOTE: Used to deal with permission issues caused by Gapps updates
+PRODUCT_COPY_FILES += \
+    device/google/bonito/permissions/pixel_permissions_product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/pixel_permissions_product.xml
+
 # Properties
 TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
 
