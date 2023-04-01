@@ -189,6 +189,7 @@ product/etc/permissions/com.android.sdm.plugins.diagmon.xml
 product/etc/permissions/com.google.android.hardwareinfo.xml
 product/etc/permissions/com.google.android.odad.xml
 product/etc/permissions/com.google.omadm.trigger.xml
+product/etc/permissions/com.google.android.wfcactivation.xml
 product/etc/permissions/com.verizon.apn.xml
 product/etc/permissions/com.verizon.services.xml
 product/etc/permissions/features-verizon.xml
@@ -215,6 +216,7 @@ product/lib64/libsecureuisvc_jni.so
 -product/priv-app/HotwordEnrollmentXGoogleRT5514/HotwordEnrollmentXGoogleRT5514.apk;PRESIGNED
 -product/priv-app/ImsServiceEntitlement/ImsServiceEntitlement.apk
 -product/priv-app/OemDmTrigger/OemDmTrigger.apk
+-product/priv-app/WfcActivation/WfcActivation.apk;PRESIGNED
 
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/etc/permissions/com.android.omadm.radioconfig.xml
