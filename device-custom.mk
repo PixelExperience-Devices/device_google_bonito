@@ -106,10 +106,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.multisim.config=dsds \
     persist.vendor.mdm.multisim.cfg=dsds
 
-# Elmyra
-PRODUCT_PACKAGES += \
-    ElmyraService
-
 # Now Playing
 PRODUCT_PACKAGES += \
     NowPlayingOverlay
