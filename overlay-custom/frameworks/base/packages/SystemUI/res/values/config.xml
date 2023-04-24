@@ -31,7 +31,4 @@
     <!-- Whether to show a alarm dialog when device's usb port is overheating. -->
     <integer name="config_showUsbPortAlarm">1</integer>
 
-    <!-- Unlock ripple animation -->
-    <bool name="config_enableUnlockRippleAnimation">false</bool>
-
 </resources>
