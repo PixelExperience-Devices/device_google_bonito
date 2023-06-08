@@ -106,6 +106,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.multisim.config=dsds \
     persist.vendor.mdm.multisim.cfg=dsds
 
+# NGA packages
+PRODUCT_PACKAGES += \
+    NgaResources \
+    nga
+
 # Now Playing
 PRODUCT_PACKAGES += \
     NowPlayingOverlay
